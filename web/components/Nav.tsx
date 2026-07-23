@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/phenotypes", label: "Phenotypes" },
   { href: "/drugs", label: "Drugs" },
   { href: "/variants", label: "Variants" },
+  { href: "/visualizations", label: "Visualizations" },
 ];
 
 export default function Nav() {

@@ -17,6 +17,18 @@
   --pop-eas: #4c8a3f;
   --pop-afr: #6b4fa0;
   --pop-amr: #b3453d;
+
+  /* Diverging: metabolizer phenotype scale, centered on Normal (neutral gray) */
+  --div-poor: #b3453d;
+  --div-intermediate: #dba99e;
+  --div-normal: #9aa0a8;
+  --div-rapid: #a9c8ea;
+  --div-ultrarapid: #2563a8;
+
+  /* Ordinal: one-directional function/sensitivity scales (light = mild/normal) */
+  --ord-1: #cfe8e0;
+  --ord-2: #5fa694;
+  --ord-3: #0d6e5f;
 }
 
 @theme inline {
@@ -42,6 +54,21 @@
     --muted: #9a9ea6;
     --accent: #35c4a5;
     --accent-foreground: #06231d;
+
+    /* re-stepped for the dark OKLCH lightness band (0.48-0.67); rest of the
+       categorical set already clears both bands unchanged */
+    --pop-beb: #d1701f;
+    --pop-sas: #a08c1a;
+
+    --div-poor: #d97a6e;
+    --div-intermediate: #e8beb3;
+    --div-normal: #9aa0a8;
+    --div-rapid: #bcd7f0;
+    --div-ultrarapid: #6fa8dc;
+
+    --ord-1: #1f4a41;
+    --ord-2: #3f9683;
+    --ord-3: #4fd9bb;
   }
 }
 
@@ -54,6 +81,19 @@
   --muted: #9a9ea6;
   --accent: #35c4a5;
   --accent-foreground: #06231d;
+
+  --pop-beb: #d1701f;
+  --pop-sas: #a08c1a;
+
+  --div-poor: #d97a6e;
+  --div-intermediate: #e8beb3;
+  --div-normal: #9aa0a8;
+  --div-rapid: #bcd7f0;
+  --div-ultrarapid: #6fa8dc;
+
+  --ord-1: #1f4a41;
+  --ord-2: #3f9683;
+  --ord-3: #4fd9bb;
 }
 
 :root[data-theme="light"] {
@@ -65,6 +105,19 @@
   --muted: #6b6f76;
   --accent: #0d6e5f;
   --accent-foreground: #ffffff;
+
+  --pop-beb: #e8792c;
+  --pop-sas: #b7a021;
+
+  --div-poor: #b3453d;
+  --div-intermediate: #dba99e;
+  --div-normal: #9aa0a8;
+  --div-rapid: #a9c8ea;
+  --div-ultrarapid: #2563a8;
+
+  --ord-1: #cfe8e0;
+  --ord-2: #5fa694;
+  --ord-3: #0d6e5f;
 }
 
 body {

@@ -3,7 +3,6 @@ import { getApiInfo } from "@/lib/api";
 
 export default async function HomePage() {
   const info = await getApiInfo();
-  const s = info.statistics;
 
   return (
     <div className="flex flex-col gap-20">
@@ -49,29 +48,6 @@ export default async function HomePage() {
             API docs ↗
           </a>
         </div>
-
-        <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-6 text-sm">
-          <div>
-            <dt className="text-muted">Pharmacogenes</dt>
-            <dd className="text-lg font-semibold tabular-nums">{s.pharmacogenes}</dd>
-          </div>
-          <div>
-            <dt className="text-muted">Allele frequencies</dt>
-            <dd className="text-lg font-semibold tabular-nums">{s.allele_frequencies}</dd>
-          </div>
-          <div>
-            <dt className="text-muted">Phenotype frequencies</dt>
-            <dd className="text-lg font-semibold tabular-nums">{s.phenotype_frequencies}</dd>
-          </div>
-          <div>
-            <dt className="text-muted">Drug recommendations</dt>
-            <dd className="text-lg font-semibold tabular-nums">{s.drug_recommendations}</dd>
-          </div>
-          <div>
-            <dt className="text-muted">Populations</dt>
-            <dd className="text-lg font-semibold tabular-nums">7</dd>
-          </div>
-        </dl>
       </section>
 
       {/* Why */}
@@ -103,44 +79,6 @@ export default async function HomePage() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* Data sources */}
-      <section>
-        <h2 className="text-sm font-semibold">Data sources</h2>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {[
-            "1000 Genomes Project (phase 3, GRCh37)",
-            "PharmGKB",
-            "CPIC",
-            "PyPGx",
-            "dbSNP",
-          ].map((src) => (
-            <span
-              key={src}
-              className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-muted"
-            >
-              {src}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA banner */}
-      <section className="flex flex-col items-start gap-3 rounded-2xl border border-border bg-surface-muted p-8 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h2 className="text-lg font-semibold">Ready to explore the data?</h2>
-          <p className="mt-1 text-sm text-muted">
-            Query allele frequencies, phenotypes, and drug recommendations across 7
-            populations.
-          </p>
-        </div>
-        <Link
-          href="/overview"
-          className="shrink-0 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-        >
-          Open the database
-        </Link>
       </section>
     </div>
   );
