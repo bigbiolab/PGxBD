@@ -1,0 +1,6 @@
+# Slim dependency set for running the API service (Render, etc.) - excludes
+# the pipeline-only deps (pysam, cyvcf2, pypgx, matplotlib, seaborn) in the
+# root requirements.txt, which need native/system libs the API doesn't.
+fastapi>=0.104
+uvicorn[standard]>=0.24
+pydantic>=2.5

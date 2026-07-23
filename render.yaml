@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pgxbd-api
+    runtime: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r api/requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+    healthCheckPath: /
