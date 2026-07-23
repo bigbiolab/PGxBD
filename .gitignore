@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Claude Code local tool state
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large re-fetchable raw reference dumps (~215MB; see data/raw/SOURCES.md for
+# fetch source/script - CPIC diplotype.json alone exceeds GitHub's 100MB limit)
+data/raw/cpic/
+data/raw/clinpgx/

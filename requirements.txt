@@ -1,0 +1,31 @@
+# PGxBD Python dependencies
+# =============================================================================
+# Core data processing
+pandas>=2.0
+numpy>=1.24
+
+# VCF parsing
+pysam>=0.22
+cyvcf2>=0.31
+
+# Database
+# (sqlite3 is part of the Python standard library – no extra dependency)
+
+# API
+fastapi>=0.104
+uvicorn[standard]>=0.24
+pydantic>=2.5
+
+# Pharmacogenomics reference
+pypgx>=0.8
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+
+# Configuration
+pyyaml>=6.0
+
+# Testing
+pytest>=7.4
+httpx>=0.25

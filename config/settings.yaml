@@ -1,0 +1,146 @@
+# =============================================================================
+# PGxBD Configuration
+# =============================================================================
+# Central configuration for the PGxBD pharmacogenomic allele frequency
+# database. All pipeline scripts and the API read from this file.
+
+project:
+  name: PGxBD
+  description: Pharmacogenomic allele frequency database for the Bangladeshi population
+  version: 2.0.0
+  build_date: "2026-07-23"
+
+# ---------------------------------------------------------------------------
+# Paths (relative to project root)
+# ---------------------------------------------------------------------------
+paths:
+  project_root: "."
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  reference_data: "data/raw/reference"
+  database: "db/pgxbd.db"
+  figures: "figures"
+  tables: "data/processed"
+  scripts: "scripts"
+  api: "api"
+
+# ---------------------------------------------------------------------------
+# 1000 Genomes data
+# ---------------------------------------------------------------------------
+genomes_1000:
+  # Phase 3 release (GRCh37/hg19) – the build used for all frequency calls
+  release: "phase3"
+  assembly: "GRCh37"
+  # VCFs are per-chromosome (1-22, X) downloaded from the 1000G FTP server
+  vcf_dir: "data/raw/1000g/vcfs"
+  panel_file: "data/raw/1000g/panel.txt"
+  # Populations analysed
+  populations:
+    BEB:
+      description: "Bengali from Bangladesh"
+      super_population: SAS
+      sample_count: 86
+    SAS_EXCL_BEB:
+      description: "South Asian (Gujarati, Punjabi, Sri Lankan) excluding Bengali"
+      super_population: SAS
+      sample_count: 403
+    SAS:
+      description: "South Asian (all, including Bengali)"
+      super_population: SAS
+      sample_count: 489
+    EUR:
+      description: "European (Utah residents, Toscani, British, Iberian, Finnish)"
+      super_population: EUR
+      sample_count: 503
+    EAS:
+      description: "East Asian (Han Chinese, Japanese, Vietnamese, Dai)"
+      super_population: EAS
+      sample_count: 504
+    AFR:
+      description: "African (Yoruba, Luhya, Gambian, Mende, Esan, American)"
+      super_population: AFR
+      sample_count: 661
+    AMR:
+      description: "Admixed American (Colombian, Puerto Rican, Mexican, Peruvian)"
+      super_population: AMR
+      sample_count: 347
+
+# ---------------------------------------------------------------------------
+# Pharmacogenes
+# ---------------------------------------------------------------------------
+pharmacogenes:
+  # Genes with star-allele nomenclature (frequency computed via HWE)
+  star_allele_genes:
+    - CYP2C19
+    - CYP2C9
+    - CYP2D6
+    - CYP3A5
+    - CYP3A4
+    - TPMT
+    - SLCO1B1
+    - DPYD
+    - CYP2B6
+  # Genes with single-variant or multi-variant annotations (no HWE)
+  variant_genes:
+    - VKORC1
+    - MTHFR
+    - CYP4F2
+    - G6PD
+    - F5
+    - NUDT15
+
+# ---------------------------------------------------------------------------
+# Phenotype assignment (CPIC activity-score thresholds)
+# ---------------------------------------------------------------------------
+phenotypes:
+  # CYP2D6 activity score thresholds (CPIC)
+  cyp2d6_activity_score:
+    normal: ">=1.5 and <=2.25"
+    intermediate: ">0 and <1.5"
+    poor: "==0"
+  # CYP2C19 activity score thresholds (CPIC)
+  cyp2c19_activity_score:
+    normal: ">=1.5"
+    intermediate: ">0 and <1.5"
+    poor: "==0"
+  # CYP3A5 expresser vs non-expresser
+  cyp3a5:
+    expresser: "*1/*1, *1/*3, *1/*6, *1/*7"
+    non_expresser: "*3/*3, *3/*6, *3/*7, *6/*6, *6/*7, *7/*7"
+
+# ---------------------------------------------------------------------------
+# API server
+# ---------------------------------------------------------------------------
+api:
+  host: "0.0.0.0"
+  port: 8000
+  title: "PGxBD API"
+  description: "Pharmacogenomic allele frequency database for the Bangladeshi population"
+  version: "2.0.0"
+
+# ---------------------------------------------------------------------------
+# Reference databases
+# ---------------------------------------------------------------------------
+references:
+  pharmgkb:
+    base_url: "https://api.pharmgkb.org/v1"
+    version: "2024"
+  cpic:
+    base_url: "https://cpicpgx.org"
+    version: "2024"
+  pharmvar:
+    base_url: "https://www.pharmvar.org"
+    version: "2024"
+  pypgx:
+    version: "0.8.0"
+
+# ---------------------------------------------------------------------------
+# Validation thresholds
+# ---------------------------------------------------------------------------
+validation:
+  # CYP3A5*3 should be very high in Europeans (>0.90) – sanity check
+  cyp3a5_3_eur_min: 0.90
+  # G6PD variants should be 0.0 in BEB (wrong-position bug fix)
+  g6pd_beb_max: 0.001
+  # Phenotype frequencies must sum to 1.0 within tolerance
+  phenotype_sum_tolerance: 0.001

@@ -1,0 +1,70 @@
+gene_id,phenotype,population,frequency,study_id,calculation_method
+CYP2C19,Intermediate Metabolizer,BEB,0.4543,1000G_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Normal Metabolizer,BEB,0.2924,1000G_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Poor Metabolizer,BEB,0.1217,1000G_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Rapid Metabolizer,BEB,0.1195,1000G_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Ultrarapid Metabolizer,BEB,0.0122,1000G_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Normal Metabolizer,EUR,0.3984,1000G_EUR,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Rapid Metabolizer,EUR,0.2824,1000G_EUR,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Intermediate Metabolizer,EUR,0.2481,1000G_EUR,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Ultrarapid Metabolizer,EUR,0.05,1000G_EUR,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Poor Metabolizer,EUR,0.0211,1000G_EUR,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Intermediate Metabolizer,SAS_EXCL_BEB,0.4686,1000G_SAS_EXCL_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Normal Metabolizer,SAS_EXCL_BEB,0.2341,1000G_SAS_EXCL_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Poor Metabolizer,SAS_EXCL_BEB,0.1404,1000G_SAS_EXCL_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Rapid Metabolizer,SAS_EXCL_BEB,0.1369,1000G_SAS_EXCL_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C19,Ultrarapid Metabolizer,SAS_EXCL_BEB,0.02,1000G_SAS_EXCL_BEB,"HWE from *2, *3, *17 frequencies (includes *2/*17, *3/*17 compound het)"
+CYP2C9,Normal Metabolizer,BEB,0.7504,1000G_BEB,"HWE from *2, *3 frequencies"
+CYP2C9,Intermediate Metabolizer,BEB,0.236,1000G_BEB,"HWE from *2, *3 frequencies"
+CYP2C9,Poor Metabolizer,BEB,0.0135,1000G_BEB,"HWE from *2, *3 frequencies"
+CYP2C9,Normal Metabolizer,EUR,0.6451,1000G_EUR,"HWE from *2, *3 frequencies"
+CYP2C9,Intermediate Metabolizer,EUR,0.3496,1000G_EUR,"HWE from *2, *3 frequencies"
+CYP2C9,Poor Metabolizer,EUR,0.0053,1000G_EUR,"HWE from *2, *3 frequencies"
+CYP2C9,Normal Metabolizer,SAS_EXCL_BEB,0.7286,1000G_SAS_EXCL_BEB,"HWE from *2, *3 frequencies"
+CYP2C9,Intermediate Metabolizer,SAS_EXCL_BEB,0.2597,1000G_SAS_EXCL_BEB,"HWE from *2, *3 frequencies"
+CYP2C9,Poor Metabolizer,SAS_EXCL_BEB,0.0117,1000G_SAS_EXCL_BEB,"HWE from *2, *3 frequencies"
+CYP2D6,Normal Metabolizer,BEB,0.7053,1000G_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Intermediate Metabolizer,BEB,0.2798,1000G_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Poor Metabolizer,BEB,0.0149,1000G_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Normal Metabolizer,EUR,0.6221,1000G_EUR,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Intermediate Metabolizer,EUR,0.3434,1000G_EUR,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Poor Metabolizer,EUR,0.0346,1000G_EUR,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Normal Metabolizer,SAS_EXCL_BEB,0.7769,1000G_SAS_EXCL_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Intermediate Metabolizer,SAS_EXCL_BEB,0.2117,1000G_SAS_EXCL_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP2D6,Poor Metabolizer,SAS_EXCL_BEB,0.0114,1000G_SAS_EXCL_BEB,"HWE from *4, *10 frequencies with CPIC activity score (3-allele)"
+CYP3A5,Intermediate Metabolizer,BEB,0.4642,1000G_BEB,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Poor Metabolizer,BEB,0.4016,1000G_BEB,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Normal Metabolizer,BEB,0.1342,1000G_BEB,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Poor Metabolizer,EUR,0.8899,1000G_EUR,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Intermediate Metabolizer,EUR,0.1069,1000G_EUR,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Normal Metabolizer,EUR,0.0032,1000G_EUR,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Poor Metabolizer,SAS_EXCL_BEB,0.4555,1000G_SAS_EXCL_BEB,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Intermediate Metabolizer,SAS_EXCL_BEB,0.4388,1000G_SAS_EXCL_BEB,HWE from *3 frequency (corrected REF orientation)
+CYP3A5,Normal Metabolizer,SAS_EXCL_BEB,0.1057,1000G_SAS_EXCL_BEB,HWE from *3 frequency (corrected REF orientation)
+SLCO1B1,Normal Function,BEB,0.58,1000G_BEB,"HWE from *1B, *5 frequencies"
+SLCO1B1,Decreased Function,BEB,0.4172,1000G_BEB,"HWE from *1B, *5 frequencies"
+SLCO1B1,Low Function,BEB,0.0027,1000G_BEB,"HWE from *1B, *5 frequencies"
+SLCO1B1,Normal Function,EUR,0.5418,1000G_EUR,"HWE from *1B, *5 frequencies"
+SLCO1B1,Decreased Function,EUR,0.4323,1000G_EUR,"HWE from *1B, *5 frequencies"
+SLCO1B1,Low Function,EUR,0.0259,1000G_EUR,"HWE from *1B, *5 frequencies"
+SLCO1B1,Normal Function,SAS_EXCL_BEB,0.6245,1000G_SAS_EXCL_BEB,"HWE from *1B, *5 frequencies"
+SLCO1B1,Decreased Function,SAS_EXCL_BEB,0.3738,1000G_SAS_EXCL_BEB,"HWE from *1B, *5 frequencies"
+SLCO1B1,Low Function,SAS_EXCL_BEB,0.0017,1000G_SAS_EXCL_BEB,"HWE from *1B, *5 frequencies"
+TPMT,Normal Metabolizer,BEB,0.9091,1000G_BEB,"HWE from *2, *3A, *3C frequencies"
+TPMT,Intermediate Metabolizer,BEB,0.0887,1000G_BEB,"HWE from *2, *3A, *3C frequencies"
+TPMT,Poor Metabolizer,BEB,0.0022,1000G_BEB,"HWE from *2, *3A, *3C frequencies"
+TPMT,Normal Metabolizer,EUR,0.8787,1000G_EUR,"HWE from *2, *3A, *3C frequencies"
+TPMT,Intermediate Metabolizer,EUR,0.1174,1000G_EUR,"HWE from *2, *3A, *3C frequencies"
+TPMT,Poor Metabolizer,EUR,0.0039,1000G_EUR,"HWE from *2, *3A, *3C frequencies"
+TPMT,Normal Metabolizer,SAS_EXCL_BEB,0.968,1000G_SAS_EXCL_BEB,"HWE from *2, *3A, *3C frequencies"
+TPMT,Intermediate Metabolizer,SAS_EXCL_BEB,0.0317,1000G_SAS_EXCL_BEB,"HWE from *2, *3A, *3C frequencies"
+TPMT,Poor Metabolizer,SAS_EXCL_BEB,0.0003,1000G_SAS_EXCL_BEB,"HWE from *2, *3A, *3C frequencies"
+VKORC1,GG (normal sensitivity),BEB,0.7107,1000G_BEB,HWE from -1639G>A (rs9923231) frequency
+VKORC1,GA (intermediate sensitivity),BEB,0.2647,1000G_BEB,HWE from -1639G>A (rs9923231) frequency
+VKORC1,AA (high sensitivity),BEB,0.0246,1000G_BEB,HWE from -1639G>A (rs9923231) frequency
+VKORC1,GA (intermediate sensitivity),EUR,0.4748,1000G_EUR,HWE from -1639G>A (rs9923231) frequency
+VKORC1,GG (normal sensitivity),EUR,0.3749,1000G_EUR,HWE from -1639G>A (rs9923231) frequency
+VKORC1,AA (high sensitivity),EUR,0.1503,1000G_EUR,HWE from -1639G>A (rs9923231) frequency
+VKORC1,GG (normal sensitivity),SAS_EXCL_BEB,0.735,1000G_SAS_EXCL_BEB,HWE from -1639G>A (rs9923231) frequency
+VKORC1,GA (intermediate sensitivity),SAS_EXCL_BEB,0.2446,1000G_SAS_EXCL_BEB,HWE from -1639G>A (rs9923231) frequency
+VKORC1,AA (high sensitivity),SAS_EXCL_BEB,0.0204,1000G_SAS_EXCL_BEB,HWE from -1639G>A (rs9923231) frequency
