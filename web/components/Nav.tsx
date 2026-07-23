@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import PgxMark from "./PgxMark";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -21,9 +22,7 @@ export default function Nav() {
     <header className="sticky top-0 z-20 border-b border-border bg-surface/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-accent text-[13px] font-bold text-accent-foreground">
-            P
-          </span>
+          <PgxMark className="h-7 w-7 shrink-0" />
           <span className="text-sm font-semibold tracking-tight">PGxBD</span>
         </Link>
         <nav className="flex flex-1 gap-1 overflow-x-auto text-sm">
