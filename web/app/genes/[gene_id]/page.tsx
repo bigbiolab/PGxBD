@@ -1,9 +1,18 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getGeneDetail } from "@/lib/api";
+import { getGeneDetail, getGenes } from "@/lib/api";
 import Badge from "@/components/Badge";
 import FrequencyBar from "@/components/FrequencyBar";
 import { functionColor, cpicLevelColor } from "@/lib/colors";
+
+// Static export has no per-request server, so every gene page must be
+// enumerated at build time; unlisted ids fall through to app/not-found.tsx.
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const genes = await getGenes();
+  return genes.map((g) => ({ gene_id: g.gene_id }));
+}
 
 export async function generateMetadata({
   params,

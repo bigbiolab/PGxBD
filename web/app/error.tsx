@@ -1,5 +1,7 @@
 "use client";
 
+import { API_BASE } from "@/lib/api";
+
 export default function Error({
   error,
   reset,
@@ -12,11 +14,9 @@ export default function Error({
       <p className="text-sm font-medium text-red-500">Error</p>
       <h1 className="text-2xl font-semibold tracking-tight">Couldn&apos;t reach the PGxBD API</h1>
       <p className="max-w-md text-sm text-muted">
-        {error.message || "The API request failed."} Make sure the API is running at{" "}
-        <code className="rounded bg-surface-muted px-1 py-0.5">
-          uvicorn api.main:app --reload --port 8000
-        </code>
-        .
+        {error.message || "The API request failed."} Make sure the API at{" "}
+        <code className="rounded bg-surface-muted px-1 py-0.5">{API_BASE}</code> is running
+        (locally: <code className="rounded bg-surface-muted px-1 py-0.5">uvicorn api.main:app --reload --port 8000</code>).
       </p>
       <button
         onClick={() => reset()}

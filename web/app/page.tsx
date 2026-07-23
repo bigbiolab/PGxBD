@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getApiInfo } from "@/lib/api";
+import { API_BASE, getApiInfo } from "@/lib/api";
 
 export default async function HomePage() {
   const info = await getApiInfo();
@@ -40,7 +40,7 @@ export default async function HomePage() {
             Browse genes
           </Link>
           <a
-            href="http://localhost:8000/docs"
+            href={`${API_BASE}/docs`}
             target="_blank"
             rel="noreferrer"
             className="px-2 py-2.5 text-sm font-medium text-muted hover:text-accent"

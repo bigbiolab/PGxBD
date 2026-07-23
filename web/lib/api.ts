@@ -8,7 +8,7 @@ import type {
   VariantComparison,
 } from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 async function apiFetch<T>(path: string, params?: Record<string, string | undefined>): Promise<T> {
   const url = new URL(path, API_BASE);
@@ -17,7 +17,10 @@ async function apiFetch<T>(path: string, params?: Record<string, string | undefi
       if (value) url.searchParams.set(key, value);
     }
   }
-  const res = await fetch(url.toString(), { cache: "no-store" });
+  // No `cache: "no-store"`: static export requires cacheable fetches at
+  // build time (there's no server afterward to re-fetch on request) - this
+  // whole site is rebuilt on every push anyway.
+  const res = await fetch(url.toString());
   if (!res.ok) {
     throw new Error(`PGxBD API request failed: ${res.status} ${url.toString()}`);
   }
@@ -30,7 +33,7 @@ export const getGenes = () => apiFetch<Pharmacogene[]>("/genes");
 
 export async function getGeneDetail(geneId: string): Promise<GeneDetail | null> {
   const url = new URL(`/genes/${encodeURIComponent(geneId)}`, API_BASE);
-  const res = await fetch(url.toString(), { cache: "no-store" });
+  const res = await fetch(url.toString());
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`PGxBD API request failed: ${res.status} ${url.toString()}`);
   return res.json() as Promise<GeneDetail>;
